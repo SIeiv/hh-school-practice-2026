@@ -1,0 +1,3 @@
+const e=document.getElementById("slider"),t=document.getElementById("slider_indicator"),o=t.children;let n=0,c=e.childElementCount;const l=()=>{for(let e=0;e<o.length;e++)o[e].style.backgroundColor="#dfdedd";o[n].style.backgroundColor="black"},d=()=>{e.scrollTo({top:0,left:n*e.clientWidth,behavior:"smooth"})};l();const s=()=>{n<c-1?n++:n=0,l(),d()},i=()=>{n>0?n--:n=c-1,l(),d()};setInterval(()=>{s()},5e3);let h=0;e.ontouchstart=e=>{h=e.changedTouches[0].clientX},e.ontouchend=e=>{e.changedTouches[0].clientX-h>20?i():e.changedTouches[0].clientX-h<-20&&s()},e.onmousedown=e=>{h=e.clientX},e.onmouseup=e=>{e.clientX-h>20?i():e.clientX-h<-20&&s()};//# sourceMappingURL=index.fcd47395.js.map
+
+//# sourceMappingURL=index.fcd47395.js.map
